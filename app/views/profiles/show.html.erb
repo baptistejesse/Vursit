@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Profile</b>
+  <%= @profile.user.email%>
+<h1>
+<ul class="unstyled">
+<% @video.each do |vid| %>
+
+<div>
+<li>Title: <%=vid.title %></li>
+<li><%= link_to 'Go to it', vid %></li>
+<li><%= pluralize( vid.flaggings.count, "vote") %>
+</div>
+<br/>
+
+
+
+<%end%>
+</ul>
+</p>
+
+
