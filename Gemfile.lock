@@ -137,6 +137,7 @@ GEM
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
     orm_adapter (0.1.0)
+    pg (0.13.2)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -213,11 +214,13 @@ DEPENDENCIES
   geocoder
   httparty
   jquery-rails
+  json
   mail
   make_flaggable!
   meta_search (>= 1.1.0.pre)
   nested_form
   omniauth-facebook
+  pg
   postmark-rails!
   rails (= 3.2.5)
   sass-rails (~> 3.2.3)
