@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-authorize_resource :unless => :devise_controller?
+authorize_resource :unless => :devise_controller? , only: [:edit,:update,:destroy]
 before_filter :authenticate_user!, :except =>["index", "show"]
   # GET /videos
   # GET /videos.json
