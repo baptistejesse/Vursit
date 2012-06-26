@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-load_and_resource, :only => [:edit,:update,:destroy]
+load_and_authorize_resource, :only => [:edit,:update,:destroy]
 before_filter :authenticate_user!, :except =>["index", "show"]
   # GET /videos
   # GET /videos.json
