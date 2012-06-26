@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-authorize_resource :unless => :devise_controller?
+load_and_resource
   # GET /profiles
   # GET /profiles.json
   def index

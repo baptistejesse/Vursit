@@ -1,5 +1,5 @@
 class VidvidsController < ApplicationController
-authorize_resource :unless => :devise_controller?
+load_and_resource, only: :create
 before_filter :authenticate_user!
 def vote
 
