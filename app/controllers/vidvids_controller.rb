@@ -1,5 +1,5 @@
 class VidvidsController < ApplicationController
-load_and_resource, only: :create
+load_and_resource, :only => :create
 before_filter :authenticate_user!
 def vote
 
