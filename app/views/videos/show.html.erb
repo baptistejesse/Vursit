@@ -60,14 +60,17 @@
 
 
    <%= f.hidden_field :user_id,{:value => current_user.id} %>
-
 <div class="field">
-  <%= f.label :viddy1, "link" %><br />
+  <%= f.label :type, "Type" %><br />
+  <%= f.text_field :type %>
+</div>
+<div class="field">
+  <%= f.label :viddy1, "Link" %><br />
   <%= f.text_field :viddy1 %>
 </div>
 <div class="field">
-  <%= f.label :title1 %><br />
-  <%= f.text_field :title1 %>
+  <%= f.label :title1,"Title" %><br />
+  <%= f.text_field :title1 , placeholder: "This is the best..."%>
 </div>
  <div class="actions">
     <%= f.submit %>

@@ -11,8 +11,12 @@
     </div>
   <% end %>
 <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :type, "Type" %>
+    <%= f.text_field :type %>
+  </div>
+<div class="field">
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title, placeholder: "This is the best.." %>
   </div>
   <div class="field">
     <%= f.label :viddy,"Video link" %>

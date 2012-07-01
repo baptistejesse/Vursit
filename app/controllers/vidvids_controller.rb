@@ -1,6 +1,7 @@
 class VidvidsController < ApplicationController
 load_and_authorize_resource :only => :create
 before_filter :authenticate_user!
+
 def vote
 
 @vidvid = Vidvid.find(params[:id])
