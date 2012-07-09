@@ -10,7 +10,7 @@
 <div>
 <li>Title: <%=vid.title %></li>
 <li><%= link_to 'Go to it', vid %></li>
-<li><%= pluralize( vid.flaggings.count, "vote") %>
+<li><%= pluralize( vid.flaggings.size, "vote") %>
 </div>
 <br/>
 

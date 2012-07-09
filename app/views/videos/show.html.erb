@@ -48,7 +48,7 @@
 <div>
 <p>
 <%= link_to "Vote", vote_vidvid_path(@video.vidvid), :content_tag => "button", :class => "btn btn-success" %>
-<h3><%= pluralize(@video.vidvid.flaggings.count, "people") %> voted for this.</h3>
+<h3><%= pluralize(@video.vidvid.flaggings.size, "people") %> voted for this.</h3>
 <% end %>
 
 <% if @video.vidvid.nil? %>
