@@ -29,6 +29,7 @@
 <hr>
 <br/>
 <% if @video.vidvid.present? %>
+<iframe src="https://embed.spotify.com/?uri=#{@name}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
   <h2><%= @video.vidvid.title1 %></h2>
 <br/>
@@ -62,7 +63,7 @@
    <%= f.hidden_field :user_id,{:value => current_user.id} %>
 <div class="field">
   <%= f.label :type, "Type" %><br />
-  <%= f.text_field :type %>
+ <%= f.select( :type, [["Music","music"],["Tweet","tweet"],["Video","video"]]) %>
 </div>
 <div class="field">
   <%= f.label :viddy1, "Link" %><br />

@@ -9,4 +9,6 @@ $(".container-fluid").fitVids()
 $('#main').masonry
     #options
     itemSelector : '#vidds'
-    columnWidth : 600
+    columnWidth : 300
+
+$('')

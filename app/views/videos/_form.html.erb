@@ -12,14 +12,14 @@
   <% end %>
 <div class="field">
     <%= f.label :type, "Type" %>
-    <%= f.text_field :type %>
+    <%= f.select( :type, [["Music","music"],["Tweet","tweet"],["Video","video"]]) %>
   </div>
 <div class="field">
     <%= f.label :title, "Title" %>
     <%= f.text_field :title, placeholder: "This is the best.." %>
   </div>
   <div class="field">
-    <%= f.label :viddy,"Video link" %>
+    <%= f.label :viddy,"link" %>
     <%= f.text_field :viddy %>
   </div>
   

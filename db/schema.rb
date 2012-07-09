@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120701200347) do
+ActiveRecord::Schema.define(:version => 20120709200455) do
 
   create_table "flaggings", :force => true do |t|
     t.string   "flaggable_type"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20120701200347) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "type"
+    t.string   "content"
   end
 
   create_table "vidvids", :force => true do |t|
@@ -72,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20120701200347) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "type"
+    t.string   "content"
   end
 
 end
