@@ -16,7 +16,15 @@
 	
 	  <h2><%= @video.title %></h2>
 <br/>
+<% if @music == @video %>
+<iframe src="https://embed.spotify.com/?uri=#{@name}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+<% elsif @videos.include? @video %>
  <a id="indy" href="<%= @video.viddy %>"/></a>
+
+<% elsif @tweet.include? @video %>
+<%= puts @video.content %>
+<% end %>
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vursit.heroku.com/videos/<%= params[:id] %>" data-lang="en" data-size="medium" data-text="i just voted for <%= @video.title %>" data-hashtags="vursit"   data-count="none">Tweet</a>
 <div class="fb-like" data-href="http://vursit.heroku.com/videos/<%= params[:id] %>" data-send="false" data-width="300" data-show-faces="true"></div>
 </p>
@@ -29,7 +37,6 @@
 <hr>
 <br/>
 <% if @video.vidvid.present? %>
-<iframe src="https://embed.spotify.com/?uri=#{@name}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
   <h2><%= @video.vidvid.title1 %></h2>
 <br/>

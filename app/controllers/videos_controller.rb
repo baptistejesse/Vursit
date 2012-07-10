@@ -26,7 +26,9 @@ before_filter :authenticate_user!, :except =>["index", "show"]
   # GET /videos/1.json
   def show
     @video = Video.find(params[:id])
-
+   @music = Video.music
+   @tweet = Video.tweet
+   @videos = Video.video
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @video }

@@ -1,4 +1,7 @@
 class Video < ActiveRecord::Base
+scope :video, where(typical: "video")
+scope :music, where(typical: "music")
+scope :tweet, where(typical: "tweet")
 
 before_save :get_content  
   
