@@ -42,7 +42,15 @@
 <br/>
 <!---video1 -->	
 
-  <a id="indy2" href="<%= @video.vidvid.viddy1%>"/></a>
+ <% if @video.vidvid.typical == "music" %>
+<iframe src="https://embed.spotify.com/?uri=<%= @video.vidvid.viddy1 %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<br/>
+<% elsif @video.vidvid.typical == "video" %>
+<a href="<%= @video.vidvid.viddy1 %>"</a>
+
+<% elsif @video.vidvid.typical == "tweet" %>
+<%= @video.vidvid.content.html_safe %>
+<%end%>
 
 <!---video1-->
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vursit.heroku.com/videos/<%= params[:id] %>" data-lang="en" data-size="medium" data-text="I just voted for <%= @video.vidvid.title1 %>" data-hashtags="vursit"   data-count="none">Tweet</a>
