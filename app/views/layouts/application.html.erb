@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Ribeye+Marrow' rel='stylesheet' type='text/css'>
     <title><%= content_for?(:title) ? yield(:title) : "Vursit" %></title>
     <%= csrf_meta_tags %>
  	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -49,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Vursit</a>
+          <a style="font-family: 'Ribeye Marrow', cursive;" class="brand" href="#">Vursit</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "Feed", videos_path %></li>
