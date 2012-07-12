@@ -14,7 +14,7 @@
 <p>
 
 	
-	  <h2 style="font-family: 'Fredoka One', cursive;"><%= @video.title.capitalize %> by <% if @video.user.name.include? "Jesse"%><img src="https://graph.facebook.com/jesse.baptiste/picture"/> <% else %><img src="https://graph.facebook.com/<%= @video.user.pic %>/picture"/><% end %> </h2>
+	  <h2 style="font-family: 'Fredoka One', cursive;"><%= @video.title.capitalize %> by <% if @video.user.name == "Jesse Baptiste"%><img src="https://graph.facebook.com/jesse.baptiste/picture"/> <% else %><img src="https://graph.facebook.com/<%= @video.user.pic %>/picture"/><% end %> </h2>
 <br/>
 <% if @video.typical == "music" %>
 <iframe src="https://embed.spotify.com/?uri=<%= @video.viddy %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
@@ -38,7 +38,7 @@
 <br/>
 <% if @video.vidvid.present? %>
 
-  <h2 style="font-family: 'Fredoka One', cursive;><%= @video.vidvid.title1.capitalize %> by <% if @video.vidvid.user.name.include? "Jesse"%><img src="https://graph.facebook.com/jesse.baptiste/picture"/> <% else %><img src="https://graph.facebook.com/<%= @video.vidvid.user.pic %>/picture"/><% end %> </h2>
+  <h2 style="font-family: 'Fredoka One', cursive;><%= @video.vidvid.title1.capitalize %> by <% if @video.vidvid.user.name == "Jesse Baptiste"%><img src="https://graph.facebook.com/jesse.baptiste/picture"/> <% else %><img src="https://graph.facebook.com/<%= @video.vidvid.user.pic %>/picture"/><% end %> </h2>
 <br/>
 <!---video1 -->	
 
