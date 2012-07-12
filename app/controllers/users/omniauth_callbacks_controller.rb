@@ -1,7 +1,7 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
     # You need to implement the method below in your model
-    @user = User.from_omniauth(env["omniauth.auth"]), current_user)
+    @user = User.from_omniauth(request.env["omniauth.auth"], current_user)
     #user = User.from_omniauth(env["omniauth.auth"])
        #session[:user_id] = user.id
     if @user.persisted?
