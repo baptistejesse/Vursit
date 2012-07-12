@@ -14,17 +14,17 @@
 <p>
 
 	
-	  <h2><%= @video.title %></h2>
+	  <h2 style="font-family: 'Fredoka One', cursive;"><%= @video.title.capitalize %></h2>
 <br/>
-<% if @music == @video %>
-<iframe src="https://embed.spotify.com/?uri=#{@name}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<% if @video.typical == "music" %>
+<iframe src="https://embed.spotify.com/?uri=<%= @video.viddy %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<br/>
+<% elsif @video.typical == "video" %>
+<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/2GgVEnMgJ5s?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/2GgVEnMgJ5s?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
-<% elsif @videos.include? @video %>
- <a id="indy" href="<%= @video.viddy %>"/></a>
-
-<% elsif @tweet.include? @video %>
-<%= puts @video.content %>
-<% end %>
+<% elsif @video.typical == "tweet" %>
+<%= @video.content.html_safe %>
+<%end%>
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vursit.heroku.com/videos/<%= params[:id] %>" data-lang="en" data-size="medium" data-text="i just voted for <%= @video.title %>" data-hashtags="vursit"   data-count="none">Tweet</a>
 <div class="fb-like" data-href="http://vursit.heroku.com/videos/<%= params[:id] %>" data-send="false" data-width="300" data-show-faces="true"></div>
 </p>
@@ -45,7 +45,7 @@
   <a id="indy2" href="<%= @video.vidvid.viddy1%>"/></a>
 
 <!---video1-->
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vursit.heroku.com/videos/<%= params[:id] %>" data-lang="en" data-size="medium" data-text="i just voted for <%= @video.vidvid.title1 %>" data-hashtags="vursit"   data-count="none">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vursit.heroku.com/videos/<%= params[:id] %>" data-lang="en" data-size="medium" data-text="I just voted for <%= @video.vidvid.title1 %>" data-hashtags="vursit"   data-count="none">Tweet</a>
 
 <div class="fb-like" data-href="http://vursit.heroku.com/videos/<%= params[:id] %>" data-send="false" data-width="300" data-show-faces="true"></div>
 </p>
@@ -69,8 +69,8 @@
 
    <%= f.hidden_field :user_id,{:value => current_user.id} %>
 <div class="field">
-  <%= f.label :type, "Type" %><br />
- <%= f.select(:type, [["Music","music"],["Tweet","tweet"],["Video","video"]]) %>
+  <%= f.label :typical, "Type" %><br />
+ <%= f.select(:typical, [["Music","music"],["Tweet","tweet"],["Video","video"]]) %>
 </div>
 <div class="field">
   <%= f.label :viddy1, "Link" %><br />

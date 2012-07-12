@@ -2,13 +2,12 @@
 $ ->
   $('#slide').hide()
   $('#slider').click ->
-   $('#slide').toggle("slow")
+   $('#slide').show("slow")
+   
 
 $(".container-fluid").fitVids()
 
 $('#main').masonry
     #options
     itemSelector : '#vidds'
-    columnWidth : 300
-
-$('')
+    columnWidth : 400

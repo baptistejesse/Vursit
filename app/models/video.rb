@@ -1,7 +1,5 @@
 class Video < ActiveRecord::Base
-scope :video, where(typical: "video")
-scope :music, where(typical: "music")
-scope :tweet, where(typical: "tweet")
+
 
 before_save :get_content  
   
@@ -26,11 +24,7 @@ if self.typical == "tweet"
   response = HTTParty.get("https://api.twitter.com/1/statuses/oembed.json?id=#{self.viddy.scan(/\d+/).join}")  
   @response = response['html']
  self.content = @response
-   
-else
-  response.code != 200
-  ArgumentError.new("Uh..try again.")  
- 
+
   end
 end
 
