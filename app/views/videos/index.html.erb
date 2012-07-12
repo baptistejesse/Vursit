@@ -6,7 +6,7 @@
   
    <div id="vidds" style="margin:10px;float:left;padding:15px;-webkit-border-radius: 5px;
 -moz-border-radius: 5px;
-border-radius: 5px;"><h6 style="text-align:center;"><%= "#{ video.title}" %></h6><% if video.typical == "music" %>
+border-radius: 5px;"><h5 style="text-align:center;"><%= "#{ video.title}" %> by <img src="<%= @video.user.pic.html_safe%>"/></h5><% if video.typical == "music" %>
 <iframe src="https://embed.spotify.com/?uri=<%= video.viddy %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 <br/>
 <% elsif video.typical == "video" %>
