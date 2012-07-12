@@ -11762,7 +11762,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   $(function() {
     $('#slide').hide();
     return $('#slider').click(function() {
-      return $('#slide').show("slow");
+      return $('#slide').toggle("slow");
     });
   });
 
@@ -11770,7 +11770,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
   $('#main').masonry({
     itemSelector: '#vidds',
-    columnWidth: 400
+    columnWidth: 350
   });
 
 }).call(this);
