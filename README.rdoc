@@ -1,3 +1,5 @@
 == Vursit
 
 Vursit where you can basically vote against your friends on content while discovering other content.
+
+http://vursits.herokuapp.com/
