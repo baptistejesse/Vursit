@@ -15,7 +15,7 @@ class Vidvid < ActiveRecord::Base
  def get_content
 
   if self.typical == "tweet"
-    response = HTTParty.get("https://api.twitter.com/1/statuses/oembed.json?id=#{self.viddy.scan(/\d+/).join}")  
+    response = HTTParty.get("https://api.twitter.com/1/statuses/oembed.json?id=#{self.viddy1.scan(/\d+/).join}")  
     @response = response['html']
    self.content = @response
  
