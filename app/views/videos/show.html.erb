@@ -45,9 +45,10 @@
  <% if @video.vidvid.typical == "music" %>
 <iframe src="https://embed.spotify.com/?uri=<%= @video.vidvid.viddy1 %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 <br/>
+<% end %>
 <% if @video.vidvid.typical == "video" %>
 <a href="<%= @video.vidvid.viddy1 %>"</a>
-
+<% end %>
 <% if @video.vidvid.typical == "tweet" %>
 <%=h @video.vidvid.content %>
 <%end%>
