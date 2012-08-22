@@ -49,7 +49,7 @@
 <a href="<%= @video.vidvid.viddy1 %>"</a>
 
 <% elsif @video.vidvid.typical == "tweet" %>
-<%= @video.vidvid.content.html_safe %>
+<%=h @video.vidvid.content %>
 <%end%>
 
 <!---video1-->
